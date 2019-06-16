@@ -1,0 +1,10 @@
+hive常用的参数设置
+
+#分区
+hive.exec.dynamic.partition=true                 默认是false 设置为true，表示开启动态分区功能
+hive.exec.dynamic.partition.mode=strict          设置成为nonstrict,表示允许所有分区都是动态的
+hive.exec.max.dynamic.partitions.pernode=100      设置每个mapper和reducer可以创建的做大分区数量，如果大于这个数量会抛出异常
+hive.exec.max.dynamic.partitions=100               一个动态分区创建语句可以创建的最大动态分区数量
+
+#显示列名
+hive.resultset.use.unique.colume.names=false;
